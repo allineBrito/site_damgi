@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.gov-br-text {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+.title-container {
+    margin-top: 120px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.titulo {
+    font-size: 32px;
+    font-weight: bold;
+    color: brown;
+}
+
+.submenu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: #8B5A2B; /* Marronzinho */
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submenu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.submenu li {
+    flex: 1;
+    text-align: center;
+    background: #703403;
+    padding: 15px; /* Aumentei o padding para deixar os blocos mais grossos */
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.submenu li:hover {
+    background: #0b767e;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sinapir-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5ede1; /* Tom de marrom claro */
+    padding: 100px; /* Aumentei ainda mais o espaço interno */
+    border-radius: 10px;
+    max-width: 100%; /* Agora ocupa quase a tela toda */
+    min-height: 500px;
+    margin: 20px auto; /* Pequeno espaçamento em cima e embaixo */
+    position: relative; /* Necessário para posicionar as caixas dentro dessa seção */
+}
+
+
+.sinapir-texto {
+    width: 60%; /* O texto pega mais espaço */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.sinapir-texto h2 {
+    font-size: 40px; /* Mais destaque no título */
+    margin-bottom: 20px;
+}
+
+.sinapir-texto p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.sinapir-imagem {
+    width: 38%; /* Mantendo espaço pra imagem */
+}
+
+.sinapir-imagem img {
+    width: 100%;
+    border-radius: 8px;
+}
+/* Link "Clique aqui" */
+.clique-aqui {
+    display: inline-block;
+    background-color: #197202;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin-top: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.clique-aqui:hover {
+    background-color: #ffcc00;
+}
+
+.hub-igualdade-racial {
+    background-color: #f5f5f5; /* Cor de fundo clara */
+    padding: 60px 20px; /* Espaçamento ao redor da seção */
+    text-align: center; /* Alinhar o texto ao centro */
+}
+
+.hub-introducao h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.hub-introducao p {
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.hub-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 50%; /* Torna o card um círculo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 180px; /* Tamanho fixo do card */
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Começa do topo */
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    overflow: hidden; /* Evita que elementos saiam do círculo */
+}
+
+.card img {
+    width: 60px; /* Ajustei para um tamanho menor */
+    height: 85px;
+    object-fit: contain; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+}
+
+.card h3 {
+    font-size: 14px; /* Reduzi para caber melhor */
+    color: #003366;
+    margin: 5px 0;
+}
+
+.card p {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+    padding: 0 5px;
+    line-height: 1.2;
+    max-width: 90%; /* Para evitar quebra feia */
+    text-overflow: ellipsis; /* Adiciona "..." caso o texto seja longo */
+    overflow: hidden;
+    white-space: normal; /* Permite que o texto quebre em múltiplas linhas */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .hub-conteudo {
+        gap: 20px;
+    }
+
+    .card {
+        width: 160px; /* Reduz o tamanho em telas pequenas */
+        height: 160px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.carrossel {
+    position: relative;
+    width: 100%; /* Agora o carrossel ocupa toda a largura da tela */
+    max-width: 100%; /* Ajuste para ocupar toda a largura disponível */
+    height: 1000px; /* Aumentei a altura do carrossel */
+    margin: 20px auto;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+    position: relative;
+}
+
+.slide a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; /* Agora a imagem ocupa toda a altura do carrossel */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px;
+}
+
+.texto {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.texto h3 {
+    font-size: 24px; /* Tamanho maior para o título */
+}
+
+.texto p {
+    font-size: 16px; /* Aumentei o tamanho da descrição */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: black;
+}
