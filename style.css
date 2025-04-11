@@ -65,43 +65,40 @@ body {
 }
 
 .submenu {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 15px 20px;
-    background: #8B5A2B; /* Marronzinho */
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 12px 8vw;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .submenu ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     list-style: none;
-    gap: 15px;
-    width: 100%;
-    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
 }
 
-.submenu li {
-    flex: 1;
-    text-align: center;
-    background: #703403;
-    padding: 15px; /* Aumentei o padding para deixar os blocos mais grossos */
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.submenu li:hover {
-    background: #0b767e;
-}
-
-.submenu a {
+.submenu li a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+    color: #004080;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.submenu li a:hover {
+    background-color: #e9f2fb;
+    color: #00264d;
+}
+
+
 
 .sinapir-section {
     display: flex;
@@ -133,13 +130,17 @@ body {
     line-height: 1.8;
 }
 
-.sinapir-imagem {
-    width: 38%; /* Mantendo espaço pra imagem */
+.sinapir-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sinapir-imagem img {
-    width: 100%;
-    border-radius: 8px;
+.sinapir-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 /* Link "Clique aqui" */
 .clique-aqui {
@@ -250,6 +251,26 @@ body {
     }
 }
 
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .hub-conteudo {
+        gap: 20px;
+    }
+
+    .card {
+        width: 160px; /* Reduz o tamanho em telas pequenas */
+        height: 160px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -262,82 +283,120 @@ body {
 }
 
 .carrossel {
-    position: relative;
-    width: 100%; /* Agora o carrossel ocupa toda a largura da tela */
-    max-width: 100%; /* Ajuste para ocupar toda a largura disponível */
-    height: 1000px; /* Aumentei a altura do carrossel */
-    margin: 20px auto;
-    overflow: hidden;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f0f0f0;
 }
 
-.slides-container {
-    width: 100%;
+.carrossel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
     overflow: hidden;
 }
 
 .slides {
     display: flex;
-    width: 300%;
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    flex: 0 0 100%;
-    text-align: center;
-    position: relative;
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
 }
 
-.slide a {
-    text-decoration: none;
-    color: black;
+.slide.ativo {
     display: block;
-    width: 100%;
 }
 
 .slide img {
     width: 100%;
-    height: 100%; /* Agora a imagem ocupa toda a altura do carrossel */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    border-radius: 8px;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .texto {
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.6);
+    background-color: #00254F;
     color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.texto h3 {
-    font-size: 24px; /* Tamanho maior para o título */
-}
-
-.texto p {
-    font-size: 16px; /* Aumentei o tamanho da descrição */
+    padding: 10px;
 }
 
 .prev, .next {
+    cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00254F;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 10px;
     font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.prev:hover, .next:hover {
-    background-color: black;
+.prev {
+    left: 0;
 }
+
+.next {
+    right: 0;
+}
+/* Sessão de notícias aprimorada */
+.noticias {
+    padding: 40px 8vw;
+    background-color: #f9f9f9;
+}
+
+.noticias h2 {
+    font-size: 24px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.noticia {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex: 1 1 30%;
+    transition: transform 0.3s;
+    min-width: 280px;
+    max-width: 100%;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.noticia h3 {
+    font-size: 18px;
+    color: #004080;
+    margin: 12px 16px 4px;
+}
+
+.noticia p {
+    font-size: 14px;
+    color: #444;
+    margin: 0 16px 16px;
+}
+
+.noticia a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
