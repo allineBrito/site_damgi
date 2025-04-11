@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atos Normativos</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #0e0909;
+    }
+
+    .header {
+      background-color: #003366;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    .gov-br-text {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #ffcc00;
+    }
+
+    /* Submenu */
+    .submenu {
+      background-color: #f2f2f2;
+      padding: 10px 8vw;
+      position: fixed;
+      top: 60px; /* logo abaixo do header */
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .submenu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .submenu li a {
+      text-decoration: none;
+      color: #020202;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .submenu li a:hover {
+      color: #ffcc00;
+    }
+
+    /* padding ajustado pra header + submenu */
+    main {
+      padding: 160px 8vw 2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .tabela-atos {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    .tabela-atos th, .tabela-atos td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .tabela-atos th {
+      background-color: #f2f2f2;
+    }
+
+    .tabela-atos a {
+      color: #003366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .tabela-atos a:hover {
+      text-decoration: underline;
+    }
+
+    .legenda {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+   <header class="header">
+    <a href="https://www.gov.br" target="_blank" class="gov-br-text">gov.br</a>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">COMUNICA BR</a></li>
+        <li><a href="#">ACESSO À INFORMAÇÃO</a></li>
+        <li><a href="#">PARTICIPE</a></li>
+        <li><a href="#">LEGISLAÇÃO</a></li>
+        <li><a href="#">ÓRGÃOS DO GOVERNO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Submenu -->
+  <nav class="submenu">
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="informes.html">Informes MIR</a></li>
+        <li><a href="atir.html">ATIR</a></li>
+        <li><a href="norma.html">Normativos</a></li>
+        <li><a href="paineis.html">Painéis</a></li>
+        <li><a href="data.html">Data SINAPIR</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Atos Normativos</h1>
+    <p>Aqui você encontra as portarias, instruções normativas e demais atos relacionados à promoção da igualdade racial.</p>
+
+    <label for="filtro-tipo"><strong>Filtrar por tipo:</strong></label>
+    <select id="filtro-tipo" onchange="filtrarPorTipo()">
+      <option value="todos">Todos</option>
+      <option value="Acordos de Cooperação">Acordos de Cooperação</option>
+      <option value="Termo de Execução Descentralizada">Termo de Execução Descentralizada</option>
+      <option value="Instrução Normativa">Instrução Normativa</option>
+      <option value="Nota Técnica">Nota Técnica</option>
+    </select>
+
+    <button onclick="window.history.back()" style="
+      margin-top: 20px;
+      margin-bottom: 10px;
+      background-color: #003366;
+      color: rgb(87, 26, 26);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    ">
+      ← Voltar
+    </button>
+
+    <table class="tabela-atos">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Tipo</th>
+          <th>Número</th>
+          <th>Ementa</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela">
+        <tr>
+          <td>10/04/2025</td>
+          <td>Acordos de Cooperação</td>
+          <td>001/2025</td>
+          <td>Apoio ao Desenvolvimento Sustentável dos Povos e Comunidades Negras Tradicionais.</td>
+          <td><a href="https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-495624102" target="_blank">PDF</a></td>
+        </tr>
+        <tr>
+          <td>15/03/2025</td>
+          <td>Termo de Execução Descentralizada</td>
+          <td>002/2025</td>
+          <td>Custeio de 11 (onze) vagas do Programa Executivo de Competências para Liderança...</td>
+          <td><a href="https://www.gov.br/igualdaderacial/pt-br/acesso-a-informacao/convenios-e-transferencias/SEI_4082755_Termo_de_Execucao_Descentralizada_1.pdf" target="_blank">PDF</a></td>
+        </tr>
+        <tr>
+          <td>15/03/2025</td>
+          <td>Instrução Normativa</td>
+          <td>002/2025</td>
+          <td>Estabelece procedimentos para monitoramento de políticas de igualdade racial.</td>
+          <td><a href="atos/in001_2025.pdf" target="_blank">PDF</a></td>
+        </tr>
+        <tr>
+          <td>15/03/2025</td>
+          <td>Nota Técnica</td>
+          <td>002/2025</td>
+          <td>Estabelece procedimentos para monitoramento de políticas de igualdade racial.</td>
+          <td><a href="atos/in001_2025.pdf" target="_blank">PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="legenda">Clique nos links para visualizar ou baixar os documentos em formato PDF.</p>
+  </main>
+
+  <script>
+    function filtrarPorTipo() {
+      const filtro = document.getElementById('filtro-tipo').value;
+      const linhas = document.querySelectorAll('#corpo-tabela tr');
+
+      linhas.forEach(linha => {
+        const tipo = linha.children[1].textContent;
+        if (filtro === 'todos' || tipo === filtro) {
+          linha.style.display = '';
+        } else {
+          linha.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
