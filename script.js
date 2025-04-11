@@ -1,15 +1,19 @@
-let index = 0;
-const slides = document.querySelector(".slides");
-const totalSlides = document.querySelectorAll(".slide").length;
-const tempoDeEspera = 30000; // Tempo de espera entre os slides em milissegundos (3 segundos)
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
 
-function mudarSlide(direcao) {
-    index = (index + direcao + totalSlides) % totalSlides;
-    slides.style.transition = "transform 0.5s ease-in-out"; // Transição suave
-    slides.style.transform = `translateX(${-index * 100}%)`;
+function mostrarSlide(n) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("ativo");
+    });
+
+    slideIndex = (n + slides.length) % slides.length;
+    slides[slideIndex].classList.add("ativo");
 }
 
-// Configuração para o carrossel funcionar automaticamente
-setInterval(function() {
-    mudarSlide(1); // Avançar para o próximo slide
-}, tempoDeEspera);
+function mudarSlide(n) {
+    mostrarSlide(slideIndex + n);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    mostrarSlide(slideIndex);
+});
