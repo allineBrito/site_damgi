@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATIR - Atividades de Treinamento e Iniciativas Relacionadas</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    .header {
+      background-color: #003366;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    .gov-br-text {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #ffcc00;
+    }
+
+    /* Submenu */
+    .submenu {
+      background-color: #f2f2f2;
+      padding: 10px 8vw;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .submenu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .submenu li a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .submenu li a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      padding: 160px 8vw 2rem;
+    }
+
+    h1, h2 {
+      color: #003366;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #d2bba0;
+      padding-bottom: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    .video-container {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .video {
+      min-width: 300px;
+      max-width: 560px;
+      flex: 0 0 auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+    }
+
+    .publicacao, .repositorio {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .publicacao img, .repositorio img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .publicacao-texto, .repositorio-texto {
+      padding: 1rem;
+    }
+
+    .publicacao-texto a, .repositorio-texto a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .publicacao-texto a:hover, .repositorio-texto a:hover {
+      text-decoration: underline;
+    }
+
+    .fiar-link {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .fiar-link a {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #f3f3f3;
+      color: rgb(0, 0, 0);
+      font-size: 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .fiar-link a:hover {
+      background-color: #002244;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="https://www.gov.br" target="_blank" class="gov-br-text">gov.br</a>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">COMUNICA BR</a></li>
+        <li><a href="#">ACESSO À INFORMAÇÃO</a></li>
+        <li><a href="#">PARTICIPE</a></li>
+        <li><a href="#">LEGISLAÇÃO</a></li>
+        <li><a href="#">ÓRGÃOS DO GOVERNO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Submenu -->
+  <nav class="submenu">
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="informes.html">Informes MIR</a></li>
+        <li><a href="atir.html">ATIR</a></li>
+        <li><a href="norma.html">Normativos</a></li>
+        <li><a href="paineis.html">Painéis</a></li>
+        <li><a href="data.html">Data SINAPIR</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>ATIR -</h1>
+
+    <section>
+      <h2>Introdução</h2>
+      <p>
+        Bem-vindo ao ATIR, um espaço dedicado a promover... à igualdade racial. Aqui você encontrará recursos educativos, encontros virtuais, publicações e notas técnicas, além de um repositório de práticas exitosas.
+      </p>
+    </section>
+
+    <section>
+      <h2>Encontros Virtuais</h2>
+      <div class="video-container">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Publicações e Notas Técnicas</h2>
+      <p>Confira abaixo documentos técnicos e publicações relevantes que apoiam a formulação de políticas de igualdade racial:</p>
+
+      <div class="publicacao">
+        <img src="https://img.cdndsgni.com/preview/11599815.jpg" alt="Nota Técnica">
+        <div class="publicacao-texto">
+          <a href="https://www.gov.br/igualdaderacial/pt-br/composicao/secretaria-de-gestao-do-sistema-nacional-de-promocao-da-igualdade-racial/diretoria-de-avaliacao-monitoramento-e-gestao-da-informacao/notas-tecnicas/nota-tecnica-sei-no-42023senapirmir.pdf" target="_blank">
+            NOTA TÉCNICA SEI Nº 4/2023/SENAPIR/MIR
+          </a>
+          <p>
+            Assunto: Alteração da Lei 12.288, de 20 de julho de 2010 (Estatuto da Igualdade Racial), para incluir o quesito cor/raça em instrumentos de coleta de dados referentes a trabalho e emprego e para dispor sobre a realização de pesquisa censitária que verifique o percentual de trabalhadores negros no setor público.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Repositório de Práticas e Publicações</h2>
+      <p>Explore artigos científicos que tratam de desafios e estratégias na promoção da igualdade racial no Brasil:</p>
+
+      <div class="repositorio">
+        <img src="https://img.cdndsgni.com/preview/11599815.jpg" alt="Artigo 1">
+        <div class="repositorio-texto">
+          <a href="#" target="_blank">Orçamento público e promoção da igualdade racial</a>
+          <p>
+            Ana Luísa Coelho e Tatiana Silva, ambas atuantes na avaliação e monitoramento de planejamento e orçamento no Ministério da Igualdade Racial, problematizam a centralidade do enfrentamento às desigualdades raciais no projeto de desenvolvimento brasileiro atual e nos orçamentos públicos. Demonstram que a implantação de um orçamento sensível a raça apresenta desafios que precisam ser encarados como prioridade de governo. As autoras destacam, em especial, a lacuna de dados desagregados por raça; a falta de entendimento da pauta como central nas políticas públicas; o subfinanciamento de políticas para a igualdade racial; a pulverização de ações quando a destinação de recursos não é exclusiva para públicos específicos; e a resistência de grupos privilegiados, que minimizam os efeitos da distribuição desigual dos recursos públicos sobre oportunidades de formação e atuação profissional.
+          </p>
+        </div>
+      </div>
+
+      <div class="repositorio">
+        <img src="https://img.cdndsgni.com/preview/11599815.jpg" alt="Artigo 2">
+        <div class="repositorio-texto">
+          <a href="https://www.gov.br/igualdaderacial/pt-br/composicao/secretaria-de-gestao-do-sistema-nacional-de-promocao-da-igualdade-racial/diretoria-de-avaliacao-monitoramento-e-gestao-da-informacao/artigos-cientificos" target="_blank">Governança municipal de políticas públicas de igualdade racial</a>
+          <p>
+            Este artigo propõe uma reflexão sobre a governança de políticas públicas de promoção da igualdade racial, considerando arranjos institucionais, atores, processos e instrumentos formais e informais que têm sido postos em prática para coordenação e implementação dessas políticas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <h2>FIAR - Ferramenta de Interação para Avaliação Racial</h2>
+        <p>O FIAR é uma ferramenta desenvolvida para apoiar os entes federativos no monitoramento e avaliação das políticas de promoção da igualdade racial.</p>
+  
+        <div class="fiar-link">
+          <a href="https://repositorio.enap.gov.br/handle/1/6745" target="_blank">Acesse a página do FIAR no Repositório da ENAP</a>
+        </div>
+      </section>
+  </main>
+</body>
+
+</html>
