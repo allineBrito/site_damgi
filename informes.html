@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informes MIR</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f3ef;
+      color: #3a2b23;
+    }
+
+    .header {
+      background-color: #003366;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    .gov-br-text {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: rgb(253, 253, 253);
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #ffcc00;
+    }
+
+    /* Submenu */
+    .submenu {
+      background-color: #f2f2f2;
+      padding: 10px 8vw;
+      position: fixed;
+      top: 60px; /* logo abaixo do header */
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .submenu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .submenu li a {
+      text-decoration: none;
+      color: #050505;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .submenu li a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+  padding: 180px 8vw 4rem;
+    }  
+
+    .titulo {
+      font-size: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+      color: #4e342e;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #5e3f2c;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #d2bba0;
+      padding-bottom: 0.4rem;
+    }
+
+    .edicao {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .edicao img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .edicao-texto {
+      padding: 1rem;
+    }
+
+    .edicao-texto a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .edicao-texto a:hover {
+      text-decoration: underline;
+    }
+
+    .voltar-container {
+    margin-top: 3rem;
+    text-align: center;
+    border: 1px dashed red; /* só pra teste */
+    }
+
+    .voltar-container button {
+      padding: 10px 25px;
+      background-color: #5e3f2c;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .voltar-container button:hover {
+      background-color: #7b5642;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="https://www.gov.br" target="_blank" class="gov-br-text">gov.br</a>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">COMUNICA BR</a></li>
+        <li><a href="#">ACESSO À INFORMAÇÃO</a></li>
+        <li><a href="#">PARTICIPE</a></li>
+        <li><a href="#">LEGISLAÇÃO</a></li>
+        <li><a href="#">ÓRGÃOS DO GOVERNO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!-- Submenu -->
+   <nav class="submenu">
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="informes.html">Informes MIR</a></li>
+        <li><a href="atir.html">ATIR</a></li>
+        <li><a href="norma.html">Normativos</a></li>
+        <li><a href="paineis.html">Painéis</a></li>
+        <li><a href="data.html">Data SINAPIR</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+    <h1 class="titulo">INFORMES DO MINISTÉRIO DA IGUALDADE RACIAL</h1>
+
+    <section>
+      <h2>Sobre o Informe</h2>
+      <p>
+        O Informe MIR é um documento de caráter informativo que objetiva a disseminação de conhecimento tendo por base temas diversos que guardem relação com a promoção da igualdade racial e o combate às desigualdades.
+        Elaborado por técnicas e técnicos da Diretoria de Avaliação, Monitoramento e Gestão da Informação (DAMGI), o Informe MIR corresponde às demandas de conteúdos que contribuam para a divulgação de dados e pesquisas com vistas a ampliar o debate e a reflexão sobre as questões raciais no Brasil.
+      </p>
+    </section>
+
+    <section>
+      <h2>Equipe Editorial</h2>
+      <p><strong>Editora principal:</strong> Tatiana Dias Silva</p>
+      <p><strong>Editores:</strong> Luciano Pereira da Silva, Edvaldo Batista de Sá</p>
+      <p><strong>Revisoras:</strong> Cleide Lemes da Silva Cruz, Taís de Sant’Anna Machado</p>
+    </section>
+
+    <section>
+      <h2>Edições Publicadas</h2>
+
+      <div class="edicao">
+        <img src="https://etnico.wordpress.com/wp-content/uploads/2024/02/captura-de-tela-2024-02-19-as-15.58.09.png?w=462" alt="Informe 1">
+        <div class="edicao-texto">
+          <a href="https://www.gov.br/igualdaderacial/pt-br/composicao/secretaria-de-gestao-do-sistema-nacional-de-promocao-da-igualdade-racial/diretoria-de-avaliacao-monitoramento-e-gestao-da-informacao/informativos/informe-edicao-censo-quilombola-2022_31-08.pdf" target="_blank">
+            Informe nº 1, ago. 2023 - Edição Censo Quilombola 2022
+          </a>
+        </div>
+      </div>
+
+      <div class="edicao">
+        <img src="https://media.istockphoto.com/id/1262687224/pt/vetorial/abstract-black-woman-portraits-set-of-female-silhouettes-girls-faces-with-floral.jpg?s=612x612&w=0&k=20&c=nb4q_ET1zxVsYn5eijd8AS-8z17M8waWheY1Ql9PXes=" alt="Informe 2">
+        <div class="edicao-texto">
+          <a href="https://www.gov.br/igualdaderacial/pt-br/composicao/secretaria-de-gestao-do-sistema-nacional-de-promocao-da-igualdade-racial/diretoria-de-avaliacao-monitoramento-e-gestao-da-informacao/informativos/informe-edicao-mulheres-negras.pdf" target="_blank">
+            Informe nº 2, set. 2023 - Edição Mulheres Negras
+          </a>
+        </div>
+      </div>
+
+      <div class="edicao">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDdgXQBKf18hy8nWLDAdfbye-Cr-sz6g_4Gw&s" alt="Informe 3">
+        <div class="edicao-texto">
+          <a href="https://www.gov.br/igualdaderacial/pt-br/composicao/secretaria-de-gestao-do-sistema-nacional-de-promocao-da-igualdade-racial/diretoria-de-avaliacao-monitoramento-e-gestao-da-informacao/informativos/Informe-edicao-censo-demogrfico2022.pdf" target="_blank">
+            Informe nº 3, fev. 2024 - Edição Censo Demográfico 2022
+          </a>
+        </div>
+      </div>
+
+      <div class="edicao">
+        <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/5a-conferencia-nacional-de-promocao-da-igualdade-racial-acontecera-entre-8-e-12-de-maio-de-2024/fcpzzb_abr2905183105.jpg/@@images/3465523a-b0aa-4be1-b764-1c762bef7e0f.jpeg" alt="Informe 4">
+        <div class="edicao-texto">
+          <a href="https://www.gov.br/igualdaderacial/pt-br/composicao/secretaria-de-gestao-do-sistema-nacional-de-promocao-da-igualdade-racial/diretoria-de-avaliacao-monitoramento-e-gestao-da-informacao/informativos/informe-edicao-conferencias-nacionais-de-igualdade-racial.pdf" target="_blank">
+            Informe nº 4, mar. 2024 - Edição Conferências Nacionais de Igualdade Racial
+          </a>
+        </div>
+      </div>
+
+      <div class="edicao">
+        <img src="https://sc.movimentoods.org.br/wp-content/uploads/2024/10/planeta_ods_18.png" alt="Informe 5">
+        <div class="edicao-texto">
+          <a href="#" target="_blank">
+            Informe nº 5, out. 2024 - Edição ODS 18 – Igualdade Étnico-racial
+          </a>
+        </div>
+      </div>
+
+      <div class="edicao">
+        <img src="https://reporterceara.com.br/wp-content/uploads/2025/03/Com-um-cenario-natural-privilegiado-a-Serra-do-Estevao-atrai-turistas-que-buscam-experiencias-diferenciadas-23.jpg" alt="Informe 6">
+        <div class="edicao-texto">
+          <a href="#" target="_blank">
+            Informe nº 6, mar. 2025 - Edição Disseminação de Dados e Informações para Promoção da Igualdade Racial
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Calendário de Futuras Divulgações</h2>
+      <ul>
+        <li>Informe nº 7 - Junho 2025</li>
+        <li>Informe nº 8 - Setembro 2025</li>
+        <li>Informe nº 9 - Dezembro 2025</li>
+      </ul>
+    </section>
+
+    <div class="voltar-container">
+      <button onclick="voltar()">← Voltar para a página inicial</button>
+    </div>
+  </main>
+
+  <script>
+    function voltar() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+
+</html>
