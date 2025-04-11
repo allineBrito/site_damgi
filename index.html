@@ -6,6 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>teste</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos do submenu para corresponder ao segundo código */
+        .submenu {
+            background-color: #f2f2f2;
+            padding: 10px 8vw;
+            position: fixed;
+            top: 60px; /* logo abaixo do header */
+            width: 100%;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .submenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .submenu li a {
+            text-decoration: none;
+            color: #050505;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .submenu li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Ajuste no main para compensar o submenu fixo */
+        main {
+            padding-top: 120px; /* header + submenu */
+        }
+    </style>
 </head>
 
 <body>
@@ -22,20 +60,22 @@
         </nav>
     </header>
 
+    <!-- Submenu atualizado -->
+    <nav class="submenu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="informes.html">Informes MIR</a></li>
+            <li><a href="atir.html">ATIR</a></li>
+            <li><a href="norma.html">Normativos</a></li>
+            <li><a href="paineis.html">Painéis</a></li>
+            <li><a href="data.html">Data SINAPIR</a></li>
+        </ul>
+    </nav>
+
     <main class="content">
         <div class="title-container">
             <h1 class="titulo">OBSERVATÓRIO DE MONITORAMENTO E AVALIAÇÃO</h1>
         </div>
-    
-        <nav class="submenu">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sinapir">Painel SINAPIR</a></li>
-                <li><a href="#normativos">Normativos</a></li>
-                <li><a href="#paineis">Painéis</a></li>
-                <li><a href="#datasinapir">Data SINAPIR</a></li>
-            </ul>
-        </nav>
 
         <section class="sinapir-section">
             <div class="sinapir-texto">
@@ -47,133 +87,128 @@
             </div>
             
             <div class="sinapir-imagem">
-                <img src="https://www.powerportal.com.br/img/powerbiarte/upload/Captura_de_tela_2024-08-30_132201_1725034950.png" alt="Painel de BI do Sinapir">
+                <img src="https://ckzdiversidade.com.br/wp-content/uploads/2020/06/dashboard.png" alt="Imagem da seção SINAPIR" class="sinapir-img">
             </div>
             
         </section>
 
         <section class="hub-igualdade-racial">
-    <div class="hub-introducao">
-        <h2>Hub de Igualdade Racial</h2>
-        <p>O Hub de Igualdade Racial é uma plataforma dedicada ao acesso e disseminação de informações sobre ações e políticas públicas voltadas à promoção da igualdade racial no Brasil.</p>
-    </div>
+            <div class="hub-introducao">
+                <h2>Hub de Igualdade Racial</h2>
+                <p>O Hub de Igualdade Racial é uma plataforma dedicada ao acesso e disseminação de informações sobre ações e políticas públicas voltadas à promoção da igualdade racial no Brasil.</p>
+            </div>
 
-    <div class="hub-conteudo">
-        <!-- Censo -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Censo">
-            <h3>Censo</h3>
-            <p>Informações detalhadas sobre o censo da população, com ênfase nos dados relacionados à igualdade racial.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+            <div class="hub-conteudo">
+                <!-- Censo -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Censo">
+                    <h3>Censo</h3>
+                    <p>Informações detalhadas sobre o censo da população, com ênfase nos dados relacionados à igualdade racial.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Violência -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Violência">
-            <h3>Violência</h3>
-            <p>Estudos e dados sobre a violência racial no Brasil, com relatórios e análises de segurança pública e discriminação racial.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- Violência -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Violência">
+                    <h3>Violência</h3>
+                    <p>Estudos e dados sobre a violência racial no Brasil, com relatórios e análises de segurança pública e discriminação racial.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Saúde -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Saúde">
-            <h3>Saúde</h3>
-            <p>Ações e políticas públicas voltadas para a promoção da saúde e do bem-estar da população negra e de outras minorias raciais.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- Saúde -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Saúde">
+                    <h3>Saúde</h3>
+                    <p>Ações e políticas públicas voltadas para a promoção da saúde e do bem-estar da população negra e de outras minorias raciais.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Educação -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Educação">
-            <h3>Educação</h3>
-            <p>Informações sobre a implementação de políticas públicas de igualdade racial no campo da educação, abordando acesso e qualidade.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- Educação -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Educação">
+                    <h3>Educação</h3>
+                    <p>Informações sobre a implementação de políticas públicas de igualdade racial no campo da educação, abordando acesso e qualidade.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Trabalho -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Trabalho">
-            <h3>Trabalho</h3>
-            <p>Ações para garantir a igualdade de oportunidades no mercado de trabalho, focando na inclusão da população negra e outras etnias.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- Trabalho -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Trabalho">
+                    <h3>Trabalho</h3>
+                    <p>Ações para garantir a igualdade de oportunidades no mercado de trabalho, focando na inclusão da população negra e outras etnias.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Desenvolvimento Social -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Desenvolvimento Social">
-            <h3>Desenvolvimento Social</h3>
-            <p>Ações voltadas para o desenvolvimento das comunidades e fortalecimento da economia da população negra.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- Desenvolvimento Social -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Desenvolvimento Social">
+                    <h3>Desenvolvimento Social</h3>
+                    <p>Ações voltadas para o desenvolvimento das comunidades e fortalecimento da economia da população negra.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- População -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="População">
-            <h3>População</h3>
-            <p>Estudos sobre a população negra e suas condições sociais e econômicas no Brasil.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- População -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="População">
+                    <h3>População</h3>
+                    <p>Estudos sobre a população negra e suas condições sociais e econômicas no Brasil.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Setor Público -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Setor Público">
-            <h3>Setor Público</h3>
-            <p>Programas e políticas implementadas pelo setor público para promover a igualdade racial.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
+                <!-- Setor Público -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSJnrXbjnxhtsswfQUB-4577oIzic_UxYUQ&s" alt="Setor Público">
+                    <h3>Setor Público</h3>
+                    <p>Programas e políticas implementadas pelo setor público para promover a igualdade racial.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
 
-        <!-- Recomendados -->
-        <div class="card">
-            <img src="https://ibb.co/399nc7Mb" alt="Recomendados">
-            <h3>Recomendados</h3>
-            <p>Recomendações para políticas públicas voltadas à promoção da igualdade racial e ao combate ao racismo.</p>
-            <a href="#" class="card-link">Saiba mais</a>
-        </div>
-    </div>
-</section>
+                <!-- Recomendados -->
+                <div class="card">
+                    <img src="https://ibb.co/399nc7Mb" alt="Recomendados">
+                    <h3>Recomendados</h3>
+                    <p>Recomendações para políticas públicas voltadas à promoção da igualdade racial e ao combate ao racismo.</p>
+                    <a href="#" class="card-link">Saiba mais</a>
+                </div>
+            </div>
+        </section>
 
-<section class="carrossel">
-    <h3>Notíciasl</h3>
-    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
-    <div class="slides-container">
-        <div class="slides">
-            <div class="slide">
-                <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/gestao-e-igualdade-racial-experiencias-compartilhadas-no-encontro-nacional-de-gestores-as-e-conselheiros-as-de-promocao-da-igualdade-racial" target="_blank">
-                    <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/noticias/imagem1.jpg" alt="Encontro Nacional">
-                    <div class="texto">
+        <section class="noticias">
+            <h2>Notícias</h2>
+            <div class="noticias-grid">
+                <div class="noticia">
+                    <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/gestao-e-igualdade-racial-experiencias-compartilhadas-no-encontro-nacional-de-gestores-as-e-conselheiros-as-de-promocao-da-igualdade-racial" target="_blank">
+                        <img src="https://www.gov.br/igualdaderacial/pt-br/pagina-inicial/@@govbr.institucional.tile.nitf/a911873b-a8c2-404c-9afd-3262da8caef1/@@images/77277222-7f84-447c-9fda-1b5c98d5236a.jpeg" alt="Encontro Nacional">
                         <h3>Gestão e Igualdade Racial</h3>
-                        <p>Experiências Compartilhadas no Encontro Nacional de Gestores(as).</p>
-                    </div>
-                </a>
-            </div>
-            <div class="slide">
-                <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-se-reune-com-conselheiros-e-representantes-dos-orgaos-da-politica-de-igualdade-racial-da-amazonia" target="_blank">
-                    <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/noticias/imagem2.jpg" alt="Reunião MIR">
-                    <div class="texto">
+                        <p>Experiências compartilhadas no Encontro Nacional de Gestores(as).</p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-se-reune-com-conselheiros-e-representantes-dos-orgaos-da-politica-de-igualdade-racial-da-amazonia" target="_blank">
+                        <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-mda-e-incra-assinam-portaria-conjunta-que-institui-plano-de-acao-da-agenda-nacional-de-titulacao-quilombola/20250408assinaturaportariaconjunta.jpg/@@images/22edff73-dfad-45e7-87d5-9579aa495746.jpeg" alt="Reunião MIR">
                         <h3>MIR se reúne com conselheiros</h3>
-                        <p>Órgãos da política de igualdade racial da Amazônia discutem ações.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="slide">
-                <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-e-correios-lancam-selo-em-homenagem-a-luiza-bairros" target="_blank">
-                    <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/noticias/imagem3.jpg" alt="Selo Luiza Bairros">
-                    <div class="texto">
+                        <p>Discussão de ações com representantes da Amazônia.</p>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-e-correios-lancam-selo-em-homenagem-a-luiza-bairros" target="_blank">
+                        <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-lanca-edital-para-selecao-de-liderancas-negras/20250410kalatukula_walissonbraga.jpg/@@images/97170fc3-9ddf-4524-aea4-4b0df973dafd.jpeg" alt="Selo Luiza Bairros">
                         <h3>Selo em homenagem a Luiza Bairros</h3>
                         <p>Correios e MIR lançam homenagem especial.</p>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <div class="noticia">
+                    <a href="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-e-correios-lancam-selo-em-homenagem-a-luiza-bairros" target="_blank">
+                        <img src="https://www.gov.br/igualdaderacial/pt-br/assuntos/copy2_of_noticias/mir-lanca-edital-para-selecao-de-liderancas-negras/20250410kalatukula_walissonbraga.jpg/@@images/97170fc3-9ddf-4524-aea4-4b0df973dafd.jpeg" alt="Selo Luiza Bairros">
+                        <h3>Selo em homenagem a Luiza Bairros</h3>
+                        <p>Correios e MIR lançam homenagem especial.</p>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
-</section>
-
-<script src="script.js"></script>
-
-                
+        </section>
         
+
+        <script src="script.js"></script>
     </main>
 </body>
 </html>
